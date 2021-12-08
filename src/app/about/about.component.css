@@ -1,0 +1,31 @@
+.container{
+  background: #607d8b;
+  width: 100%;
+  text-align: center;
+}
+
+h1{
+  margin: 0 0 30px 0;
+}
+
+.image-block{
+  display: flex;
+  justify-content: center;
+}
+
+.image{
+  width: 35%;
+  border-radius: 20%;
+  padding-bottom: 30px;
+  margin-right: 20px;
+}
+
+.image2{
+  width: 35%;
+  border-radius: 20%;
+  padding-bottom: 30px;
+}
+
+p{
+  font-size: 20px;
+}

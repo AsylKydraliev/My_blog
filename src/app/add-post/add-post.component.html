@@ -1,1 +1,21 @@
-<p>add-post works!</p>
+<div class="container" style="height:620px">
+  <div class="content">
+    <p class="opacity">Add new post</p>
+
+    <form class="white" (ngSubmit)="addPost($event)">
+      <div class="section">
+        <label>Title</label>
+        <input class="input" style="width:100%;" type="text" name="Name" [(ngModel)]="postTitle">
+      </div>
+      <div class="section">
+        <label>Post</label>
+        <textarea class="input" name="post" style="width:100%;" [(ngModel)]="postText"></textarea>
+      </div>
+      <button
+        type="submit" class="btn"
+        [disabled]="postTitle === '' || postText === ''"
+      >Send</button>
+    </form>
+
+  </div>
+</div>
