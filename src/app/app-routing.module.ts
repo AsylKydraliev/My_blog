@@ -4,9 +4,11 @@ import { HomeComponent } from './home/home.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { PostsComponent } from './posts/posts.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: '', component: PostsComponent},
   {path: 'addPost', component: AddPostComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contacts', component: ContactsComponent},

@@ -11,6 +11,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NotFoundComponent } from './not-found.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     ContactsComponent,
     ToolbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
