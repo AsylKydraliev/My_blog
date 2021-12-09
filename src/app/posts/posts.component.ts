@@ -16,9 +16,12 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<{[id: string]: Post}>('https://app-blog-f76a2-default-rtdb.firebaseio.com/posts.json')
       .pipe(map(result => {
+        if(result === null) {
+          return [];
+        }
         return Object.keys(result).map(id => {
           const postData = result[id];
-          return new Post(id, postData.title, postData.text);
+          return new Post(id, postData.date, postData.title, postData.text);
         });
       }))
       .subscribe(posts =>{

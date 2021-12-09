@@ -1,8 +1,15 @@
-<div class="card" *ngFor="let post of posts">
-  <h2>New Post</h2>
-  <hr>
-  <div class="post_content">
-    <h3>{{ post.title }}</h3>
-    <button>Read more >></button>
+<div class="main">
+  <div class="card" *ngFor="let post of posts">
+    <h2>New Post</h2>
+    <hr>
+    <div>
+      <p>Created on: {{ post.date }}</p>
+      <h3>{{ post.title }}</h3>
+      <hr>
+      <button [routerLink]="['posts', post.id]">Read more >></button>
+    </div>
+  </div>
+  <div class="post">
+    <router-outlet></router-outlet>
   </div>
 </div>

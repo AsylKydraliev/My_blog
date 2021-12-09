@@ -1,0 +1,13 @@
+<div *ngIf="post">
+  <div class="card">
+    <h2>{{ post.title }}</h2>
+    <hr>
+    <div class="post_content">
+      <p>Created on: {{ post.date }}</p>
+      <i>{{ post.text }}</i>
+    </div>
+    <hr>
+    <button class="delete" type="submit" (click)="onDeletePost(postId)">Delete</button>&nbsp;
+    <button class="edit" type="submit" [routerLink]="['edit']">Edit</button>
+  </div>
+</div>

@@ -3,7 +3,6 @@
   border-radius: 20px;
   border: 2px solid dimgray;
   width: 45%;
-  display: block;
   padding: 20px;
   background: black;
   color: white;
@@ -18,15 +17,22 @@ h2{
 }
 
 button{
-  padding: 10px 15px;
-  color: black;
+  padding: 15px 30px;
   border-radius: 10px;
   border: none;
-  background: #607d8b;
+  color: white;
   cursor: pointer;
+  font-size: 20px;
 }
 
 button:hover{
-  background: #cccccc;
+  background: gray;
 }
 
+.delete{
+  background: firebrick;
+}
+
+.edit{
+  background: green;
+}
