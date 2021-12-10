@@ -43,6 +43,7 @@ export class AddPostComponent implements OnInit{
     } else {
       this.http.post('https://app-blog-f76a2-default-rtdb.firebaseio.com/posts.json', postBody).subscribe();
     }
+
     void this.router.navigate(['/']);
   }
 

@@ -1,12 +1,11 @@
 .card{
-  margin: 5px auto;
   border-radius: 20px;
-  border: 2px solid dimgray;
+  border: none;
   width: 45%;
-  display: block;
   padding: 20px;
-  background: black;
-  color: white;
+  background: linear-gradient(to bottom, #cc99ff 0%, #ff9999 100%);
+  color: black;
+  margin: 5px 0;
 }
 
 .card:hover{
@@ -19,10 +18,10 @@ h2{
 
 button{
   padding: 10px 15px;
-  color: black;
+  color: white;
   border-radius: 10px;
   border: none;
-  background: #607d8b;
+  background: black;
   cursor: pointer;
 }
 
@@ -30,41 +29,5 @@ button:hover{
   background: #cccccc;
 }
 
-.preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  background: #e0e0e0;
-  z-index: 1001;
-}
 
-.preloader__image {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  width: 70px;
-  height: 70px;
-  margin-top: -35px;
-  margin-left: -35px;
-  text-align: center;
-  animation: preloader-rotate 2s infinite linear;
-}
-
-@keyframes preloader-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.loaded_hiding .preloader {
-  transition: 0.3s opacity;
-  opacity: 0;
-}
-
-.loaded .preloader {
-  display: none;
-}
 

@@ -6,10 +6,13 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostDetailsComponent } from './posts/post-details/post-details.component';
 import { NotFoundComponent } from './not-found.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', component: PostsComponent},
-  {path: 'posts/:id', component: PostDetailsComponent},
+  {path: '', component: HomeComponent},
+  {path: '', component: PostsComponent, children: [
+      {path: 'posts/:id', component: PostDetailsComponent},
+    ]},
   {path: 'addPost', component: AddPostComponent},
   {path: 'posts/:id/edit', component: AddPostComponent},
   {path: 'about', component: AboutComponent},

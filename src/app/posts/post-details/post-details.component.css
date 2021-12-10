@@ -1,11 +1,12 @@
 .card{
-  margin: 5px auto;
   border-radius: 20px;
-  border: 2px solid dimgray;
-  width: 45%;
   padding: 20px;
-  background: black;
-  color: white;
+  background: linear-gradient(to top, #cc99ff 0%, #ff9999 100%);
+  color: black;
+  width: 45%;
+  position: absolute;
+  top: 12%;
+  right: 10px;
 }
 
 .card:hover{
@@ -31,16 +32,16 @@ button{
 }
 
 button:hover{
-  background: gray;
+  background: grey;
 }
 
 .delete{
-  background: firebrick;
+  background: rgb(215, 0, 0);
   width: 50%;
 }
 
 .edit{
-  background: green;
+  background: rgb(0, 132, 0);
   width: 48%;
 }
 
