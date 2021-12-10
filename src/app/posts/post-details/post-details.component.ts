@@ -11,15 +11,18 @@ import { HttpClient } from '@angular/common/http';
 export class PostDetailsComponent implements OnInit {
   post: Post | null = null;
   postId!: string;
+  loading = false;
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
+    this.loading = true;
     this.route.params.subscribe((params: Params) => {
       if (params['id']){this.postId  = params['id'];
         this.http.get<Post>(`https://app-blog-f76a2-default-rtdb.firebaseio.com/posts/${this.postId}.json`)
           .subscribe(result => {
               this.post = result;
+              this.loading = false;
           });
       }
     });

@@ -10,10 +10,12 @@ import { map } from 'rxjs/operators';
 })
 export class PostsComponent implements OnInit {
   posts!: Post[];
+  loading = false;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.loading = true;
     this.http.get<{[id: string]: Post}>('https://app-blog-f76a2-default-rtdb.firebaseio.com/posts.json')
       .pipe(map(result => {
         if(result === null) {
@@ -26,6 +28,7 @@ export class PostsComponent implements OnInit {
       }))
       .subscribe(posts =>{
           this.posts = posts;
+          this.loading = false;
       });
   }
 }
